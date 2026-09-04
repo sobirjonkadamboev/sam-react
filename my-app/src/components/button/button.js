@@ -3,3 +3,5 @@ const ClickBTN = () => {
 	const log = 'login'
 	return <button>{user ? 'logout' : log}</button>
 }
+
+export default ClickBTN
