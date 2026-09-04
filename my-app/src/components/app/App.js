@@ -1,5 +1,6 @@
-import {} from '../button/button'
+import ClickBTN from '../button/button'
 import HeaderFunction from '../header/header'
+import SubmitBtn from '../submitField/submit'
 
 import './App.css'
 
@@ -11,6 +12,7 @@ function App() {
 		<div className='App'>
 			<HeaderFunction />
 			<ClickBTN />
+			<SubmitBtn />
 		</div>
 	)
 }
