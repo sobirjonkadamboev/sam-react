@@ -18,6 +18,7 @@ function App() {
 		<div>
 			<HeaderFunction />
 			<SubmitBtn />
+			<ClickBTN />
 		</div>
 	)
 }
