@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
-//const element = <h1>Heading Element</h1>
+/* const element = <h1>Heading Element</h1>
 
 const text = 'Hi, AI'
 
@@ -12,7 +12,7 @@ const el = (
 		<input type='text' />
 		<button>Click</button>
 	</div>
-)
+) */
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(el)
