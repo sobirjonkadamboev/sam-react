@@ -4,11 +4,7 @@ import './App.css'
 //funksiyalar kichkina harfda yoziladi
 
 function App() {
-	return (
-		<div className='App'>
-			<HeaderFunction />
-		</div>
-	)
+	return <div className='App'></div>
 }
 
 export default App
