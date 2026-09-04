@@ -15,7 +15,7 @@ const ClickBTN = () => {
 
 function App() {
 	return (
-		<div>
+		<div className='App'>
 			<HeaderFunction />
 			<SubmitBtn />
 			<ClickBTN />
