@@ -1,8 +1,9 @@
 import './App.css'
 
 const HeaderFunction = () => {
+	const text = 'Heading 2 Component'
 	//har doim komponentlar katta harfda yoziladi
-	return <h2>Heading 2 Component</h2>
+	return <h2>{text}</h2>
 }
 
 const SubmitBtn = () => {
