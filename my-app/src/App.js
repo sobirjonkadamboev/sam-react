@@ -6,7 +6,7 @@ const HeaderFunction = () => {
 }
 
 const SubmitBtn = () => {
-	;<input type='text' placeholder='Enter...'></input>
+	;<input type='text' placeholder='Enter...' />
 }
 
 function App() {
