@@ -4,8 +4,6 @@ import './App.css'
 //funksiyalar kichkina harfda yoziladi
 
 const HeaderFunction = () => {
-	const text = 'Heading 2'
-
 	const getText = text => {
 		return (
 			<div>
