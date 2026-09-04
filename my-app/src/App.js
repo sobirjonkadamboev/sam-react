@@ -1,6 +1,6 @@
 import './App.css'
 
-const headerFunction = () => {
+const HeaderFunction = () => {
 	return <h2>Heading 2 Component</h2>
 }
 
