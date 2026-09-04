@@ -7,7 +7,7 @@ const el = (
 	<div>
 		<h1>Heading 1</h1>
 		<input type='text' />
-		<button>Button</button>
+		<button>Click</button>
 	</div>
 )
 
