@@ -18,22 +18,10 @@ const HeaderFunction = () => {
 	return <div>{getText('Sobirjon')}</div>
 }
 
-const SubmitBtn = () => {
-	return <input type='text' placeholder='Enter...' />
-}
-
-const ClickBTN = () => {
-	const user = true
-	const log = 'login'
-	return <button>{user ? 'logout' : log}</button>
-}
-
 function App() {
 	return (
 		<div className='App'>
 			<HeaderFunction />
-			<SubmitBtn />
-			<ClickBTN />
 		</div>
 	)
 }
