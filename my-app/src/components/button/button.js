@@ -4,4 +4,4 @@ const ClickBTN = () => {
 	return <button>{user ? 'logout' : log}</button>
 }
 
-export default ClickBTN
+export { ClickBTN }
