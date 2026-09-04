@@ -5,7 +5,7 @@ const HeaderFunction = () => {
 	return <h2>Heading 2 Component</h2>
 }
 
-const Submit = () => {
+const SubmitBtn = () => {
 	;<input type='text' placeholder='Enter...'></input>
 }
 
@@ -13,7 +13,7 @@ function App() {
 	return (
 		<div>
 			<HeaderFunction />
-			<Submit />
+			<SubmitBtn />
 		</div>
 	)
 }
