@@ -5,7 +5,7 @@ import './index.css'
 
 const el = (
 	<div>
-		<h1>Heading 1</h1>
+		<h1 className='heading'>Heading 1</h1>
 		<input type='text' />
 		<button>Click</button>
 	</div>
