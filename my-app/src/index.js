@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom/client'
+import App from './App'
 import './index.css'
 
 /* const element = <h1>Heading Element</h1>
@@ -15,4 +16,4 @@ const el = (
 ) */
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(el)
+root.render(<App />)
