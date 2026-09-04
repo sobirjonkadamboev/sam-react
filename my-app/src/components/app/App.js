@@ -1,3 +1,4 @@
+import ClickBTN from '../button/button'
 import HeaderFunction from '../header/header'
 import './App.css'
 
@@ -8,6 +9,7 @@ function App() {
 	return (
 		<div className='App'>
 			<HeaderFunction />
+			<ClickBTN />
 		</div>
 	)
 }
