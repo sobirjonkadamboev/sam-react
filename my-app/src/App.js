@@ -12,8 +12,8 @@ const SubmitBtn = () => {
 
 const ClickBTN = () => {
 	const isLogin = false
-	const log = 'Login'
-	return <button>{log}</button>
+	const log = 'login'
+	return <button>{isLogin ? 'login' : 'logout'}</button>
 }
 
 function App() {
