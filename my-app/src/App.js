@@ -1,7 +1,7 @@
 import './App.css'
 
 const HeaderFunction = () => {
-	const text = 'Heading 2 Component'
+	const text = 'Heading 2'
 	//har doim komponentlar katta harfda yoziladi
 	return <h2>{text}</h2>
 }
