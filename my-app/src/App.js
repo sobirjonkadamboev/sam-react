@@ -5,11 +5,17 @@ const HeaderFunction = () => {
 	return <h2>Heading 2 Component</h2>
 }
 
-const submit = () => {
+const Submit = () => {
 	;<input type='text' placeholder='Enter...'></input>
 }
+
 function App() {
-	return <h1>Heading 1</h1>
+	return (
+		<div>
+			<HeaderFunction />
+			<Submit />
+		</div>
+	)
 }
 
 export default App
