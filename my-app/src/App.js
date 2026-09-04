@@ -4,10 +4,11 @@ const HeaderFunction = () => {
 	const text = 'Heading 2'
 	//har doim komponentlar katta harfda yoziladi
 	return (
-	<h2>{text}</h2>
-	<p>
-	</p>
-)
+		<div>
+			<h2>{text}</h2>
+			<p></p>
+		</div>
+	)
 }
 
 const SubmitBtn = () => {
