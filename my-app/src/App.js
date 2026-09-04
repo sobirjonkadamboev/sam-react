@@ -6,7 +6,7 @@ import './App.css'
 const HeaderFunction = () => {
 	const text = 'Heading 2'
 
-	const getText = () => {
+	const getText = text => {
 		return (
 			<div>
 				<h2>{text}</h2>
@@ -17,7 +17,7 @@ const HeaderFunction = () => {
 			</div>
 		)
 	}
-	return <div>{getText()}</div>
+	return <div>{getText('Sobirjon')}</div>
 }
 
 const SubmitBtn = () => {
