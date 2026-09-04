@@ -17,6 +17,7 @@ const HeaderFunction = () => {
 			</div>
 		)
 	}
+	return <div>{getText()}</div>
 }
 
 const SubmitBtn = () => {
