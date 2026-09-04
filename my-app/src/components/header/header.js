@@ -12,3 +12,5 @@ const HeaderFunction = () => {
 	}
 	return <div>{getText('Sobirjon')}</div>
 }
+
+export default HeaderFunction //faqat bitta export bo'ladi
