@@ -1,9 +1,12 @@
 import './App.css'
 
 //har doim komponentlar katta harfda yoziladi
+//funksiyalar kichkina harfda yoziladi
+
 const HeaderFunction = () => {
 	const text = 'Heading 2'
 
+	const getText = () => {}
 	return (
 		<div>
 			<h2>{text}</h2>
