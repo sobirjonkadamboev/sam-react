@@ -6,7 +6,10 @@ const HeaderFunction = () => {
 	return (
 		<div>
 			<h2>{text}</h2>
-			<p></p>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti,
+				velit?
+			</p>
 		</div>
 	)
 }
