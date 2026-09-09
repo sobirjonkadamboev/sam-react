@@ -1,5 +1,9 @@
 const AppFilter = () => {
-	return <div>AppFilter</div>
+	return (
+		<div className='btn-group'>
+			<button className='btn btn-dark'></button>
+		</div>
+	)
 }
 
 export default AppFilter
