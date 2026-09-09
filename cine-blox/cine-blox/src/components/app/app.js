@@ -8,7 +8,7 @@ const App = () => {
 		<div className='app'>
 			<div className='content'>
 				<AppInfo />
-				<div>
+				<div className='search-panel'>
 					<SearchPanel />
 					<AppFilter />
 				</div>
