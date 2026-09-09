@@ -1,5 +1,3 @@
-const App = () => {
-	return <h1>Hi</h1>
+export const app = () => {
+	return <div>app</div>
 }
-
-export default App
