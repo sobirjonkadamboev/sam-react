@@ -5,10 +5,10 @@ const AppFilter = () => {
 				All Movies
 			</button>
 			<button className='btn btn-outline-dark' type='button'>
-				All Movies
+				Popular Movies
 			</button>
 			<button className='btn btn-outline-dark' type='button'>
-				All Movies
+				Favourite Movies
 			</button>
 		</div>
 	)
