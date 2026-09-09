@@ -5,6 +5,7 @@ export const app = () => {
 		<div>
 			<div>
 				<AppInfo />
+				<div></div>
 			</div>
 		</div>
 	)
