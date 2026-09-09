@@ -9,10 +9,9 @@ export const App = () => {
 		<div className='app'>
 			<div className='content'>
 				<AppInfo />
-				<div>
-					<SearchPanel />
-					<AppFilter />
-				</div>
+
+				<SearchPanel />
+				<AppFilter />
 			</div>
 		</div>
 	)
