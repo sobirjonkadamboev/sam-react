@@ -1,5 +1,9 @@
 const AppInfo = () => {
-	return <div>AppInfo</div>
+	return (
+		<div>
+			<h1>AppInfo</h1>
+		</div>
+	)
 }
 
 export default AppInfo
