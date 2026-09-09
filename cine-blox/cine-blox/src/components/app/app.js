@@ -8,9 +8,10 @@ const App = () => {
 		<div className='app'>
 			<div className='content'>
 				<AppInfo />
-
-				<SearchPanel />
-				<AppFilter />
+				<div>
+					<SearchPanel />
+					<AppFilter />
+				</div>
 			</div>
 		</div>
 	)
