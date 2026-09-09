@@ -1,4 +1,4 @@
-import '../app/app.css'
+import '../app.css'
 
 import AppFilter from '../app-filter/app-filter'
 import AppInfo from '../app-info/app-info'
