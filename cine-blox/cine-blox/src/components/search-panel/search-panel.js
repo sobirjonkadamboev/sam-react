@@ -1,5 +1,5 @@
 const SearchPanel = () => {
-	return <div>SearchPanel</div>
+	return 'SearchPanel'
 }
 
 export default SearchPanel
