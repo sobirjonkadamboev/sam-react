@@ -1,7 +1,11 @@
+import { AppInfo } from '../app-info/app-info'
+
 export const app = () => {
 	return (
 		<div>
-			<div></div>
+			<div>
+				<AppInfo />
+			</div>
 		</div>
 	)
 }
