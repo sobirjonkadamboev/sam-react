@@ -1,5 +1,11 @@
 const SearchPanel = () => {
-	return <div>SearchPanel</div>
+	return (
+		<input
+			type='text'
+			className='form-control search-input'
+			placeholder='Search for Movies'
+		/>
+	)
 }
 
 export default SearchPanel
