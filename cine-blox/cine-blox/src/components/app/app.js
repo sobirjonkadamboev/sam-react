@@ -5,7 +5,7 @@ import SearchPanel from '../search-panel/search-panel'
 
 const App = () => {
 	return (
-		<div className='app'>
+		<div className='app font-monospace'>
 			<div className='content'>
 				<AppInfo />
 				<div className='search-panel'>
