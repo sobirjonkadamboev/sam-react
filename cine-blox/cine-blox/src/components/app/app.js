@@ -1,4 +1,3 @@
-import '../app/'
 import App from '../app/app'
 
 import AppFilter from '../app-filter/app-filter'
