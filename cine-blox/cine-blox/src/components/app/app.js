@@ -4,7 +4,7 @@ import SearchPanel from '../search-panel/search-panel'
 
 export const app = () => {
 	return (
-		<div>
+		<div className='app'>
 			<div>
 				<AppInfo />
 				<div>
