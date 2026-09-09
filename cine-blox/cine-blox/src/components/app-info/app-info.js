@@ -1,7 +1,7 @@
 import './app-info.css'
 
 const AppInfo = () => {
-	return <div>AppInfo</div>
+	return <div className='app-info'>AppInfo</div>
 }
 
 export default AppInfo
