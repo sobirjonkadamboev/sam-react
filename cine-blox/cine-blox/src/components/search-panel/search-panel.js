@@ -1,4 +1,4 @@
-export const SearchPanel = () => {
+const SearchPanel = () => {
 	return <div>SearchPanel</div>
 }
 

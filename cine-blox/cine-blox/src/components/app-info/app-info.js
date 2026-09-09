@@ -1,4 +1,4 @@
-export const AppInfo = () => {
+const AppInfo = () => {
 	return <div>AppInfo</div>
 }
 

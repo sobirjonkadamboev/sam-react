@@ -1,4 +1,4 @@
-export const AppFilter = () => {
+const AppFilter = () => {
 	return <div>AppFilter</div>
 }
 
