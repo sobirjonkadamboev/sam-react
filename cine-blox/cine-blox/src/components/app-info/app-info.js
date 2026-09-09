@@ -4,6 +4,7 @@ const AppInfo = () => {
 	return (
 		<div className='app-info'>
 			<p className='fs-3 text-uppercase'>Movies Watched: </p>
+			<p className='fs-4 text-uppercase'>Movies Watched: </p>
 		</div>
 	)
 }
