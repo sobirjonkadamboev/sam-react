@@ -1,5 +1,9 @@
 const AppFilter = () => {
-	return <div>AppFilter</div>
+	return (
+		<div>
+			<h1>Hi</h1>
+		</div>
+	)
 }
 
 export default AppFilter
