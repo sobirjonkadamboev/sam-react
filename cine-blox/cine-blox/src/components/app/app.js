@@ -1,3 +1,7 @@
 export const app = () => {
-	return <div>app</div>
+	return (
+		<div>
+			<div></div>
+		</div>
+	)
 }
