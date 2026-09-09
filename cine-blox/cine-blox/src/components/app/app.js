@@ -6,8 +6,9 @@ export const app = () => {
 		<div>
 			<div>
 				<AppInfo />
-				<SearchPanel />
-				<div></div>
+				<div>
+					<SearchPanel />
+				</div>
 			</div>
 		</div>
 	)
