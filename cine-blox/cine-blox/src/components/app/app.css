@@ -2,3 +2,7 @@
 	height: 100vh;
 	color: #0000;
 }
+
+.content {
+	max-width: 1000px;
+}
