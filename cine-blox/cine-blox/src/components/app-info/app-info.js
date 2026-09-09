@@ -1,7 +1,3 @@
-import React from 'react'
-
-export const app-info = () => {
-	return (
-		<div>app-info</div>
-	)
+export const AppInfo = () => {
+	return <div>AppInfo</div>
 }
