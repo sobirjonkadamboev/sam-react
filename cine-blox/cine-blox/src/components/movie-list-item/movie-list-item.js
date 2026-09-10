@@ -11,7 +11,7 @@ const MovieListItem = () => {
 			/>
 			<div className='d-flex justify-content-center align-items-center'>
 				<button type='button' className='btn-cookie btn-sm'>
-					<i className='fas fa-cookie'></i>
+					<i className='fa-solid fa-cookie'></i>
 				</button>
 				<button type='button' className='btn-trash btn-sm'>
 					<i className='fas fa-trash'></i>
