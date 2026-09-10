@@ -8,12 +8,12 @@ const MoviesAddForm = () => {
 				<input
 					type='text'
 					className='form-control new-post-label'
-					placeholder='Movie Name'
+					placeholder='Movie Name?'
 				/>
 				<input
 					type='number'
 					className='form-control new-post-label'
-					placeholder='Movie Name'
+					placeholder='Watched?'
 				/>
 			</form>
 		</div>
