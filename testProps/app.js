@@ -1,4 +1,5 @@
-const User = () => {
+const User = props => {
+	console.log(props)
 	return (
 		<div>
 			<h1>My name is Sobirjon</h1>
