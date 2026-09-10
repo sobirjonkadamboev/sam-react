@@ -4,7 +4,18 @@ const MoviesAddForm = () => {
 	return (
 		<div className='movies-add-form'>
 			<h3>Add New Movie</h3>
-			<form className='add-form d-flex'></form>
+			<form className='add-form d-flex'>
+				<input
+					type='text'
+					className='form-control new-post-label'
+					placeholder='Movie Name'
+				/>
+				<input
+					type='number'
+					className='form-control new-post-label'
+					placeholder='Movie Name'
+				/>
+			</form>
 		</div>
 	)
 }
