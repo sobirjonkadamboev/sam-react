@@ -1,6 +1,7 @@
 import AppFilter from '../app-filter/app-filter'
 import AppInfo from '../app-info/app-info'
 import '../app/app.css'
+import MovieList from '../movie-list/movie-list'
 import SearchPanel from '../search-panel/search-panel'
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
 				<div className='search-panel'>
 					<SearchPanel />
 					<AppFilter />
+					<MovieList />
 				</div>
 			</div>
 		</div>
