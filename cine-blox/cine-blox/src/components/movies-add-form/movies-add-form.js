@@ -15,7 +15,9 @@ const MoviesAddForm = () => {
 					className='form-control new-post-label'
 					placeholder='Watched?'
 				/>
-				<button type='submit' className='btn btn-outline-dark'></button>
+				<button type='submit' className='btn btn-outline-dark'>
+					Add Movie
+				</button>
 			</form>
 		</div>
 	)
