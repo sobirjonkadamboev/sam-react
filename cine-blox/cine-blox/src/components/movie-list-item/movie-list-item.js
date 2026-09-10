@@ -11,6 +11,9 @@ const MovieListItem = () => {
 				<button type='button' className='btn-cookie btn-sm'>
 					<i className='fas fa-cookie'></i>
 				</button>
+				<button type='button' className='btn-trash btn-sm'>
+					<i className='fas fa-trash'></i>
+				</button>
 			</div>
 		</li>
 	)
