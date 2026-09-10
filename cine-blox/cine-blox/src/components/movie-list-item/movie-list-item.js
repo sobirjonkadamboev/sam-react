@@ -14,9 +14,9 @@ const MovieListItem = () => {
 					<i className='fa-solid fa-cookie'></i>
 				</button>
 				<button type='button' className='btn-trash btn-sm'>
-					<i className='fas fa-trash'></i>
+					<i className='fa-solid fa-trash'></i>
 				</button>
-				<i className='fas fa-star'></i>
+				<i className='fa-solid fa-star'></i>
 			</div>
 		</li>
 	)
