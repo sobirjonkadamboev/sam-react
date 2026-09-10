@@ -1,16 +1,22 @@
-const User = props => {
-	console.log(props)
-	return (
-		<div>
-			<h1>My name is Sobirjon</h1>
-			<a href='youtube.com'>YouTube channel</a>
-		</div>
-	)
-}
+import AppFilter from '../app-filter/app-filter'
+import AppInfo from '../app-info/app-info'
+import '../app/app.css'
+import MovieList from '../movie-list/movie-list'
+import MoviesAddForm from '../movies-add-form/movies-add-form'
+import SearchPanel from '../search-panel/search-panel'
+
 const App = () => {
 	return (
-		<div>
-			<User />
+		<div className='app font-monospace'>
+			<div className='content'>
+				<AppInfo />
+				<div className='search-panel'>
+					<SearchPanel />
+					<AppFilter />
+				</div>
+				<MovieList />
+				<MoviesAddForm />
+			</div>
 		</div>
 	)
 }
