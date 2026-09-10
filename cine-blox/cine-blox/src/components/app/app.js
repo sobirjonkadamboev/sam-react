@@ -2,6 +2,7 @@ import AppFilter from '../app-filter/app-filter'
 import AppInfo from '../app-info/app-info'
 import '../app/app.css'
 import MovieList from '../movie-list/movie-list'
+import MoviesAddForm from '../movies-add-form/movies-add-form'
 import SearchPanel from '../search-panel/search-panel'
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
 					<AppFilter />
 				</div>
 				<MovieList />
+				<MoviesAddForm />
 			</div>
 		</div>
 	)
