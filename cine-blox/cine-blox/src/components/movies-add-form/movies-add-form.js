@@ -1,5 +1,5 @@
 export const MoviesAddForm = () => {
-	return <div>MoviesAddForm</div>
+	return <div className='movies-add-form'>MoviesAddForm</div>
 }
 
 export default MoviesAddForm
