@@ -10,7 +10,7 @@ const User = props => {
 const App = () => {
 	return (
 		<div>
-			<User />
+			<User firstname='Sobirjon' lastname='Kadamboev' link='youtube.com' />
 		</div>
 	)
 }
