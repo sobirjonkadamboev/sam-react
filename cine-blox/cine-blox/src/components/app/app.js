@@ -12,8 +12,8 @@ const App = () => {
 				<div className='search-panel'>
 					<SearchPanel />
 					<AppFilter />
-					<MovieList />
 				</div>
+				<MovieList />
 			</div>
 		</div>
 	)
