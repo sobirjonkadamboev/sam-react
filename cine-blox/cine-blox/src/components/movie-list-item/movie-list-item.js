@@ -1,5 +1,14 @@
 const MovieListItem = () => {
-	return <div>MovieListItem </div>
+	return (
+		<li className='list-group-item d-flex justify-content-between'>
+			<span className='list-group-item-label'>Spiderman: Brand-new Day</span>
+			<input
+				type='number'
+				className='list-group-item-input'
+				defaultValue='247'
+			/>
+		</li>
+	)
 }
 
 export default MovieListItem
