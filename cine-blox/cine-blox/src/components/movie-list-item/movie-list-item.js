@@ -1,3 +1,5 @@
+import './movie-list-item.css'
+
 const MovieListItem = () => {
 	return (
 		<li className='list-group-item d-flex justify-content-between'>
