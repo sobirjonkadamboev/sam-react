@@ -2,8 +2,10 @@ const User = props => {
 	console.log(props)
 	return (
 		<div>
-			<h1>My name is Sobirjon</h1>
-			<a href='youtube.com'>YouTube channel</a>
+			<h1>
+				My full name is {props.firstname} {props.lastname}
+			</h1>
+			<a href={props.link}>YouTube channel</a>
 		</div>
 	)
 }
