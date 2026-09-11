@@ -22,7 +22,7 @@ const App = () => {
 					<SearchPanel />
 					<AppFilter />
 				</div>
-				<MovieList />
+				<MovieList data={data} />
 				<MoviesAddForm />
 			</div>
 		</div>
