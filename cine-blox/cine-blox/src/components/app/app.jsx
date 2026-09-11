@@ -12,7 +12,11 @@ const User = props => {
 const App = () => {
 	return (
 		<div>
-			<User firstname='Sobirjon' lastname='Kadamboev' link='youtube.com' />
+			<User
+				firstname='Sobirjon'
+				lastname='Kadamboev'
+				link='https://youtube.com'
+			/>
 		</div>
 	)
 }
