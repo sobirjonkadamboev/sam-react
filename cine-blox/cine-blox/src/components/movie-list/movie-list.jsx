@@ -1,7 +1,7 @@
 import MovieListItem from '../movie-list-item/movie-list-item'
 import './movie-list.css'
 
-const MovieList = () => {
+const MovieList = ({ data }) => {
 	return (
 		<div className='movie-list'>
 			<MovieListItem name={data[0].name} viewers={107} />
