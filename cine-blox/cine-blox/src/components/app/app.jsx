@@ -1,3 +1,5 @@
+//jsx'da object qo'shilmaydi
+
 const User = props => {
 	console.log(props)
 	return (
