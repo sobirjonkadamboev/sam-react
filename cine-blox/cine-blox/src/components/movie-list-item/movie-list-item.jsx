@@ -3,11 +3,11 @@ import './movie-list-item.css'
 const MovieListItem = ({ data }) => {
 	return (
 		<li className='list-group-item d-flex justify-content-between'>
-			<span className='list-group-item-label'>{name}</span>
+			<span className='list-group-item-label'>{data[0].name}</span>
 			<input
 				type='number'
 				className='list-group-item-input'
-				defaultValue={viewers}
+				defaultValue={data[1].viewers}
 			/>
 			<div className='d-flex justify-content-center align-items-center'>
 				<button type='button' className='btn-cookie btn-sm'>
