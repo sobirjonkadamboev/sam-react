@@ -3,11 +3,11 @@ import './movie-list.css'
 
 const MovieList = ({ data }) => {
 	return (
-		<div className='movie-list'>
+		<ul className='movie-list'>
 			{data.map(item => (
 				<MovieListItem name={item.name} viewers={item.viewers} />
 			))}
-		</div>
+		</ul>
 	)
 }
 
