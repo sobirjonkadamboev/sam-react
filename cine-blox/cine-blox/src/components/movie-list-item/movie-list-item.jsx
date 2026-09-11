@@ -1,8 +1,6 @@
 import './movie-list-item.css'
 
-const MovieListItem = ({ name, viewers }) => {
-	console.log(name, viewers)
-
+const MovieListItem = ({ data }) => {
 	return (
 		<li className='list-group-item d-flex justify-content-between'>
 			<span className='list-group-item-label'>{name}</span>
