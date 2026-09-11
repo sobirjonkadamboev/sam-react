@@ -1,6 +1,8 @@
 import './movie-list-item.css'
 
-const MovieListItem = () => {
+const MovieListItem = props => {
+	console.log(props)
+
 	return (
 		<li className='list-group-item d-flex justify-content-between'>
 			<span className='list-group-item-label'>Spiderman: Brand-new Day</span>
