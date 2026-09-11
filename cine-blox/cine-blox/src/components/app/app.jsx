@@ -17,6 +17,11 @@ const App = () => {
 				lastname='Kadamboev'
 				link='https://youtube.com'
 			/>
+			<User
+				firstname='Ali'
+				lastname='Akhmedov'
+				link='https://t.me/sobirjon_kadamboev'
+			/>
 		</div>
 	)
 }
