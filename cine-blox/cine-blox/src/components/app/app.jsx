@@ -8,6 +8,7 @@ import MoviesAddForm from '../movies-add-form/movies-add-form'
 import SearchPanel from '../search-panel/search-panel'
 
 const App = () => {
+	const data = [{ name: 'Spiderman: Brand-new Day', viewers: 107 }]
 	return (
 		<div className='app font-monospace'>
 			<div className='content'>
