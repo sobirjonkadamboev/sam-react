@@ -5,7 +5,7 @@ const MovieList = ({ data }) => {
 	return (
 		<div className='movie-list'>
 			{data.map(item => (
-				<MovieListItem name='Interstellar' viewers={107} />
+				<MovieListItem name={item.name} viewers={item.viewers} />
 			))}
 		</div>
 	)
