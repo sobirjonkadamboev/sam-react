@@ -1,7 +1,7 @@
 import './movie-list-item.css'
 
-const MovieListItem = props => {
-	console.log(props)
+const MovieListItem = ({ name, viewers }) => {
+	console.log(name, viewers)
 
 	return (
 		<li className='list-group-item d-flex justify-content-between'>
