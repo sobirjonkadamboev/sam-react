@@ -1,22 +1,27 @@
-import AppFilter from '../app-filter/app-filter'
-import AppInfo from '../app-info/app-info'
-import '../app/app.css'
-import MovieList from '../movie-list/movie-list'
-import MoviesAddForm from '../movies-add-form/movies-add-form'
-import SearchPanel from '../search-panel/search-panel'
-
+const User = props => {
+	console.log(props)
+	return (
+		<div>
+			<h1>
+				My full name is {props.firstname} {props.lastname}
+			</h1>
+			<a href={props.link}>Social Media</a>
+		</div>
+	)
+}
 const App = () => {
 	return (
-		<div className='app font-monospace'>
-			<div className='content'>
-				<AppInfo />
-				<div className='search-panel'>
-					<SearchPanel />
-					<AppFilter />
-				</div>
-				<MovieList />
-				<MoviesAddForm />
-			</div>
+		<div>
+			<User
+				firstname='Sobirjon'
+				lastname='Kadamboev'
+				link='https://youtube.com'
+			/>
+			<User
+				firstname='Ali'
+				lastname='Akhmedov'
+				link='https://t.me/sobirjon_kadamboev'
+			/>
 		</div>
 	)
 }
