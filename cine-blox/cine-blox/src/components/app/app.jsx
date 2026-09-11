@@ -12,7 +12,7 @@ const App = () => {
 		{ name: 'Spiderman: Brand-new Day', viewers: 107, favourite: false },
 		{ name: 'Avengers: Dooms Day', viewers: 357, favourite: false },
 		{ name: 'Dune Series', viewers: 1448, favourite: false },
-		{ name: 'Interstellar', viewers: 32505, favourite: false },
+		{ name: 'Interstellar', viewers: 32505, favourite: true },
 	]
 	return (
 		<div className='app font-monospace'>
