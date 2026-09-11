@@ -5,7 +5,7 @@ const User = props => {
 			<h1>
 				My full name is {props.firstname} {props.lastname}
 			</h1>
-			<a href={props.link}>YouTube channel</a>
+			<a href={props.link}>Social Media</a>
 		</div>
 	)
 }
