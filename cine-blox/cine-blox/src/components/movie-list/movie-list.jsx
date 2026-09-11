@@ -4,10 +4,10 @@ import './movie-list.css'
 const MovieList = () => {
 	return (
 		<div className='movie-list'>
-			<MovieListItem />
-			<MovieListItem />
-			<MovieListItem />
-			<MovieListItem />
+			<MovieListItem name='Spiderman: Brand-new Day' viewers={107} />
+			<MovieListItem name='Avengers: Dooms Day' viewers={357} />
+			<MovieListItem name='Dune Series' viewers={1448} />
+			<MovieListItem name='Interstellar' viewers={32505} />
 		</div>
 	)
 }
