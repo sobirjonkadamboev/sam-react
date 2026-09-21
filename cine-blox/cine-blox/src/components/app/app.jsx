@@ -9,10 +9,10 @@ import SearchPanel from '../search-panel/search-panel'
 
 const App = () => {
 	const data = [
-		{ name: 'Spiderman: Brand-new Day', viewers: 107, favourite: false },
-		{ name: 'Avengers: Dooms Day', viewers: 357, favourite: false },
-		{ name: 'Dune Series', viewers: 1448, favourite: false },
-		{ name: 'Interstellar', viewers: 32505, favourite: true },
+		{ name: 'Spiderman: Brand-new Day', viewers: 107, favourite: false, id: 1 },
+		{ name: 'Avengers: Dooms Day', viewers: 357, favourite: false, id: 2 },
+		{ name: 'Dune Series', viewers: 1448, favourite: false, id: 3 },
+		{ name: 'Interstellar', viewers: 32505, favourite: true, id: 4 },
 	]
 	return (
 		<div className='app font-monospace'>
