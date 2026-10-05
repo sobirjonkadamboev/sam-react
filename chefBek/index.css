@@ -46,3 +46,10 @@ main {
 	min-width: 150px;
 	max-width: 400px;
 }
+
+.add-ingredient-form > button {
+	font-family: Inter, sans-serif;
+	border: none;
+	border-radius: 6px;
+	background-color: #141413;
+}
