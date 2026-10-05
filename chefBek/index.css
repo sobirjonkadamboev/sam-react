@@ -37,3 +37,7 @@ main {
 	gap: 12px;
 	align-items: center;
 }
+
+.add-ingredient-form > input {
+	border-radius:;
+}
