@@ -42,4 +42,5 @@ main {
 	border-radius: 6px;
 	border: 1px solid #d1d5db;
 	padding: 9px 13px;
+	flex-grow: 1;
 }
