@@ -1,3 +1,7 @@
 export default function Header() {
-	return <h1>Chef-Bek</h1>
+	return (
+		<header>
+			<img src='./images/chef-claude-icon.png' alt='' />
+		</header>
+	)
 }
