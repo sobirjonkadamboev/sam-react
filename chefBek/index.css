@@ -54,3 +54,8 @@ main {
 	background-color: #141413;
 	color: #fafaf8;
 }
+
+.add-ingredient-form > button::before {
+	content: '+';
+	margin-right: 5px;
+}
