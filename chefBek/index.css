@@ -53,6 +53,8 @@ main {
 	border-radius: 6px;
 	background-color: #141413;
 	color: #fafaf8;
+	width: 150px;
+	font-size: 0.875 rem;
 }
 
 .add-ingredient-form > button::before {
