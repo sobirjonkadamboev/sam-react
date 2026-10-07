@@ -5,7 +5,8 @@ export default function Main() {
 		<li key={ingredients}>{ingredients}</li>
 	))
 
-	function submitForm() {
+	function submitForm(event) {
+		event.preventDefault()
 		console.log('Form Submitted')
 	}
 	return (
