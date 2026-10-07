@@ -4,6 +4,10 @@ export default function Main() {
 	const ingredientsListItems = ingredients.map(ingredients => (
 		<li key={ingredients}>{ingredients}</li>
 	))
+
+	function submitForm() {
+		console.log('Form Submitted')
+	}
 	return (
 		<main>
 			<form className='add-ingredient-form'>
