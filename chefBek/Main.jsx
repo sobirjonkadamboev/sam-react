@@ -15,6 +15,7 @@ export default function Main() {
 					type='text'
 					aria-label='Add ingredients'
 					placeholder='e.g. chicken soup'
+					name='ingredient'
 				/>
 				<button>Add ingredients</button>
 			</form>
