@@ -1,10 +1,6 @@
 import React from 'react'
 export default function Main() {
-	const [ingredients, setIngredients] = React.useState([
-		'Chicken',
-		'Oregano',
-		'Tomato',
-	])
+	const [ingredients, setIngredients] = React.useState([])
 
 	const ingredientsListItems = ingredients.map(ingredients => (
 		<li key={ingredients}>{ingredients}</li>
