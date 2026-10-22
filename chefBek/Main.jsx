@@ -11,7 +11,8 @@ export default function Main() {
 		console.log('Form Submitted')
 		const formData = new FormData(event.currentTarget)
 		const newIngredient = formData.get('ingredient')
-		console.log(newIngredient)
+
+		setIngredients(prevIngredients => [...prevIngredients, newIngredient])
 	}
 	return (
 		<main>
