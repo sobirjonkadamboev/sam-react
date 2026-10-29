@@ -6,7 +6,7 @@ export default function Main() {
 		<li key={ingredients}>{ingredients}</li>
 	))
 
-	function submitForm() {
+	function addIngredient() {
 		console.log('Form Submitted')
 		const newIngredient = formData.get('ingredient')
 
@@ -14,7 +14,7 @@ export default function Main() {
 	}
 	return (
 		<main>
-			<form action={submitForm} className='add-ingredient-form'>
+			<form action={addIngredient} className='add-ingredient-form'>
 				<input
 					type='text'
 					aria-label='Add ingredients'
