@@ -23,7 +23,6 @@ export default function Main() {
 				<button>Add ingredients</button>
 			</form>
 			<ul>{ingredientsListItems}</ul>
-			<textarea></textarea>
 		</main>
 	)
 }
