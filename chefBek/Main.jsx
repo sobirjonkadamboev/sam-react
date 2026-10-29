@@ -6,17 +6,15 @@ export default function Main() {
 		<li key={ingredients}>{ingredients}</li>
 	))
 
-	function submitForm(event) {
-		event.preventDefault()
+	function submitForm() {
 		console.log('Form Submitted')
-		const formData = new FormData(event.currentTarget)
 		const newIngredient = formData.get('ingredient')
 
 		setIngredients(prevIngredients => [...prevIngredients, newIngredient])
 	}
 	return (
 		<main>
-			<form onSubmit={submitForm} className='add-ingredient-form'>
+			<form action={submitForm} className='add-ingredient-form'>
 				<input
 					type='text'
 					aria-label='Add ingredients'
