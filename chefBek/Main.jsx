@@ -6,8 +6,7 @@ export default function Main() {
 		<li key={ingredients}>{ingredients}</li>
 	))
 
-	function addIngredient() {
-		console.log('Form Submitted')
+	function addIngredient(formData) {
 		const newIngredient = formData.get('ingredient')
 
 		setIngredients(prevIngredients => [...prevIngredients, newIngredient])
