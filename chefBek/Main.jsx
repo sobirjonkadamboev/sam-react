@@ -10,7 +10,6 @@ export default function Main() {
 		const newIngredient = formData.get('ingredient')
 
 		setIngredients(prevIngredients => [...prevIngredients, newIngredient])
-		<textarea></textarea>
 	}
 	return (
 		<main>
@@ -24,6 +23,7 @@ export default function Main() {
 				<button>Add ingredients</button>
 			</form>
 			<ul>{ingredientsListItems}</ul>
+			<textarea></textarea>
 		</main>
 	)
 }
