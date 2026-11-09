@@ -29,8 +29,11 @@ export default function Main() {
 	}
 
 	function addIngredient(formData) {
-		const newIngredient = formData.get('ingredient')
-		setIngredients(prevIngredients => [...prevIngredients, newIngredient])
+		const newIngredient = formData.get('ingredient').trim()
+
+		if (newIngredient) {
+			setIngredients(prevIngredients => [...prevIngredients, newIngredient])
+		}
 	}
 
 	return (
