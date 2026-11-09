@@ -6,7 +6,7 @@ You are an assistant that receives a list of ingredients that a user has and sug
 `
 
 const ai = new GoogleGenAI({
-	apiKey: import.meta.env.AQ.Ab8RN6LYRtiUfTzAfQM09cAUy_OrjmX8C6SMPQWTjyTrkKg7gQ,
+	apiKey: import.meta.env.VITE_GEMINI_API_KEY,
 })
 
 export async function getRecipeFromGemini(ingredientsArr) {
