@@ -55,21 +55,4 @@ export default function Main() {
 			{recipeShown && <ClaudeRecipe recipe={recipe} />}
 		</main>
 	)
-	const [loading, setLoading] = React.useState(false)
-	const [error, setError] = React.useState('')
-
-	async function getRecipe() {
-		setLoading(true)
-		setError('')
-
-		try {
-			const recipeMarkdown = await getRecipeFromGemini(ingredients)
-			setRecipe(recipeMarkdown)
-		} catch (err) {
-			setError('Sorry, something went wrong. Please try again.')
-			console.error(err)
-		} finally {
-			setLoading(false)
-		}
-	}
 }
