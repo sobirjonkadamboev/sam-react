@@ -1,6 +1,6 @@
 import React from 'react'
+import { getRecipeFromGemini } from './ai'
 import IngredientsList from './components/IngredientsList'
-
 export default function Main() {
 	const [ingredients, setIngredients] = React.useState([
 		'all the main spices',
@@ -9,6 +9,18 @@ export default function Main() {
 		'tomato paste',
 	])
 	const [recipeShown, setRecipeShown] = React.useState(false)
+
+	const [recipe, setRecipe] = React.useState('')
+
+	async function getRecipe() {
+		const recipeMarkdown = await getRecipeFromGemini(ingredients)
+		setRecipe(recipeMarkdown)
+	}
+
+	async function handleGetRecipeClick() {
+		setRecipeShown(true)
+		await getRecipe()
+	}
 
 	function toggleRecipeShown() {
 		setRecipeShown(prevShown => !prevShown)
@@ -38,7 +50,7 @@ export default function Main() {
 				/>
 			)}
 
-			{recipeShown && <ClaudeRecipe />}
+			{recipeShown && <ClaudeRecipe recipe={recipe} />}
 		</main>
 	)
 }
