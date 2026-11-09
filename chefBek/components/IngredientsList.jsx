@@ -1,5 +1,5 @@
 export default function IngredientsList(props) {
-	const ingredientsListItems = ingredients.map(ingredient => (
+	const ingredientsListItems = props.ingredients.map(ingredient => (
 		<li key={ingredient}>{ingredient}</li>
 	))
 	return (
@@ -16,7 +16,7 @@ export default function IngredientsList(props) {
 					</div>
 					<button onClick={toggleRecipeShown}>Get a recipe</button>
 				</div>
-			)}
+			}
 		</section>
 	)
 }
