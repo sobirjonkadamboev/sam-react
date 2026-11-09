@@ -1,4 +1,7 @@
 export default function IngredientsList(props) {
+	const ingredientsListItems = ingredients.map(ingredient => (
+		<li key={ingredient}>{ingredient}</li>
+	))
 	return (
 		<section>
 			<h2>Ingredients on hand:</h2>
