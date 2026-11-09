@@ -1,11 +1,11 @@
-export default function IngredientsList() {
+export default function IngredientsList(props) {
 	return (
 		<section>
 			<h2>Ingredients on hand:</h2>
 			<ul className='ingredients-list' aria-live='polite'>
 				{ingredientsListItems}
 			</ul>
-			{ingredients.length > 3 && (
+			{props.ingredients.length > 3 && (
 				<div className='get-recipe-container'>
 					<div>
 						<h3>Ready for a recipe?</h3>
