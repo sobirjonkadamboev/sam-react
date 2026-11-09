@@ -1,6 +1,8 @@
 import React from 'react'
 import { getRecipeFromGemini } from './ai'
+import ClaudeRecipe from './components/ClaudeRecipe'
 import IngredientsList from './components/IngredientsList'
+
 export default function Main() {
 	const [ingredients, setIngredients] = React.useState([
 		'all the main spices',
