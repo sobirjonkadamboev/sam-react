@@ -15,10 +15,6 @@ export default function Main() {
 		setRecipeShown(prevShown => !prevShown)
 	}
 
-	const ingredientsListItems = ingredients.map(ingredient => (
-		<li key={ingredient}>{ingredient}</li>
-	))
-
 	function addIngredient(formData) {
 		const newIngredient = formData.get('ingredient')
 		setIngredients(prevIngredients => [...prevIngredients, newIngredient])
