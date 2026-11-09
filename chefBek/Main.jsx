@@ -46,7 +46,7 @@ export default function Main() {
 			{ingredients.length > 0 && (
 				<IngredientsList
 					ingredients={ingredients}
-					toggleRecipeShown={toggleRecipeShown}
+					handleGetRecipeClick={handleGetRecipeClick}
 				/>
 			)}
 
