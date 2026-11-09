@@ -3,6 +3,8 @@ import { getRecipeFromGemini } from './ai'
 import ClaudeRecipe from './components/ClaudeRecipe'
 import IngredientsList from './components/IngredientsList'
 
+
+
 export default function Main() {
 	const [ingredients, setIngredients] = React.useState([
 		'all the main spices',
@@ -53,6 +55,24 @@ export default function Main() {
 			)}
 
 			{recipeShown && <ClaudeRecipe recipe={recipe} />}
+
+			const [loading, setLoading] = React.useState(false)
+const [error, setError] = React.useState("")
+
+async function getRecipe() {
+    setLoading(true)
+    setError("")
+
+    try {
+        const recipeMarkdown = await getRecipeFromGemini(ingredients)
+        setRecipe(recipeMarkdown)
+    } catch (err) {
+        setError("Sorry, something went wrong. Please try again.")
+        console.error(err)
+    } finally {
+        setLoading(false)
+    }
+}
 		</main>
 	)
 }
