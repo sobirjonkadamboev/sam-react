@@ -1,4 +1,5 @@
 import React from 'react'
+import ClaudeRecipe from './components/ClaudeRecipe'
 
 export default function Main() {
 	const [ingredients, setIngredients] = React.useState([
@@ -52,7 +53,7 @@ export default function Main() {
 				</section>
 			)}
 
-			{recipeShown && ()}
+			{recipeShown && <ClaudeRecipe />}
 		</main>
 	)
 }
