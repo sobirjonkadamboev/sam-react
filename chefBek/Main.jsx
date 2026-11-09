@@ -32,7 +32,12 @@ export default function Main() {
 				<button>Add ingredient</button>
 			</form>
 
-			{ingredients.length > 0 && <IngredientsList ingredients={ingredients} />}
+			{ingredients.length > 0 && (
+				<IngredientsList
+					ingredients={ingredients}
+					toggleRecipeShown={toggleRecipeShown}
+				/>
+			)}
 
 			{recipeShown && <ClaudeRecipe />}
 		</main>
