@@ -1,5 +1,4 @@
 import React from 'react'
-import ClaudeRecipe from './components/ClaudeRecipe'
 import IngredientsList from './components/IngredientsList'
 
 export default function Main() {
