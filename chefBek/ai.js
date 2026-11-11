@@ -1,21 +1,17 @@
-import { HfInference } from '@huggingface/inference'
-
 const SYSTEM_PROMPT = `
-You are an assistant that receives a list of ingredients that a user has and suggests a recipe they could make with some or all of those ingredients. You don't need to use every ingredient they mention in your recipe. The recipe can include additional ingredients they didn't mention, but try not to include too many extra ingredients. Format your response in markdown to make it easier to render to a web page
+You are Chef-Bek, a helpful cooking assistant.
+You receive a list of ingredients and suggest a recipe
+that the user can make with some or all of them.
+
+You can include a few additional ingredients if needed,
+but avoid adding too many.
+
+Format your response in Markdown.
+Include a recipe name, description, preparation time,
+ingredients, and step-by-step instructions.
 `
 
-// 🚨👉 ALERT: Read message below! You've been warned! 👈🚨
-// If you're following along on your local machine instead of
-// here on Scrimba, make sure you don't commit your API keys
-// to any repositories and don't deploy your project anywhere
-// live online. Otherwise, anyone could inspect your source
-// and find your API keys/tokens. If you want to deploy
-// this project, you'll need to create a backend of some kind,
-// either your own or using some serverless architecture where
-// your API calls can be made. Doing so will keep your
-// API keys private.
-
-export async function getRecipeFromMistral(ingredientsArr) {
+export async function getRecipeFromGemini(ingredientsArr) {
 	try {
 		const response = await fetch('/api/recipe', {
 			method: 'POST',
@@ -35,11 +31,7 @@ export async function getRecipeFromMistral(ingredientsArr) {
 
 		return data.recipe
 	} catch (error) {
-		console.error('Mistral recipe error:', error)
+		console.error('Gemini recipe error:', error)
 		throw error
 	}
 }
-
-// Make sure you set an environment variable in Scrimba
-// for HF_ACCESS_TOKEN
-const hf = new HfInference(import.meta.env.HF_ACCESS_TOKEN)
