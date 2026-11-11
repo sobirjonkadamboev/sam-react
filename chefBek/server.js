@@ -49,10 +49,14 @@ app.post('/api/recipe', async (req, res) => {
 
 		res.json({ recipe })
 	} catch (error) {
-		console.error('Recipe error:', error.message)
+		console.error('Recipe error:', {
+			message: error.message,
+			status: error.status,
+			type: error.error?.type,
+		})
 
-		res.status(500).json({
-			error: 'Could not generate a recipe. Please try again.',
+		res.status(error.status || 500).json({
+			error: error.message || 'Recipe generation failed',
 		})
 	}
 })
