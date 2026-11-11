@@ -1,39 +1,20 @@
 import React from 'react'
-import { getRecipeFromGemini } from './ai'
+import { getRecipeFromChefClaude } from './ai'
 import ClaudeRecipe from './components/ClaudeRecipe'
 import IngredientsList from './components/IngredientsList'
 
 export default function Main() {
-	const [ingredients, setIngredients] = React.useState([
-		'all the main spices',
-		'pasta',
-		'ground beef',
-		'tomato paste',
-	])
-	const [recipeShown, setRecipeShown] = React.useState(false)
-
+	const [ingredients, setIngredients] = React.useState([])
 	const [recipe, setRecipe] = React.useState('')
 
 	async function getRecipe() {
-		const recipeMarkdown = await getRecipeFromGemini(ingredients)
+		const recipeMarkdown = await getRecipeFromChefClaude(ingredients)
 		setRecipe(recipeMarkdown)
 	}
 
-	async function handleGetRecipeClick() {
-		setRecipeShown(true)
-		await getRecipe()
-	}
-
-	function toggleRecipeShown() {
-		setRecipeShown(prevShown => !prevShown)
-	}
-
 	function addIngredient(formData) {
-		const newIngredient = formData.get('ingredient').trim()
-
-		if (newIngredient) {
-			setIngredients(prevIngredients => [...prevIngredients, newIngredient])
-		}
+		const newIngredient = formData.get('ingredient')
+		setIngredients(prevIngredients => [...prevIngredients, newIngredient])
 	}
 
 	return (
@@ -49,13 +30,10 @@ export default function Main() {
 			</form>
 
 			{ingredients.length > 0 && (
-				<IngredientsList
-					ingredients={ingredients}
-					handleGetRecipeClick={handleGetRecipeClick}
-				/>
+				<IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
 			)}
 
-			{recipeShown && <ClaudeRecipe recipe={recipe} />}
+			{recipe && <ClaudeRecipe recipe={recipe} />}
 		</main>
 	)
 }
