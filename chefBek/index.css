@@ -106,3 +106,27 @@ ul.ingredients-list > li {
 	font-size: 0.875rem;
 	cursor: pointer;
 }
+
+.loading-message {
+	margin: 30px auto;
+	padding: 25px;
+	text-align: center;
+	background: #f5f3ef;
+	border-radius: 12px;
+}
+
+.loading-message h2 {
+	color: #d97757;
+}
+
+.loading-message p {
+	color: #666;
+}
+
+.error-message {
+	color: #d93025;
+	background: #fff0ee;
+	padding: 15px;
+	border-radius: 8px;
+	margin: 20px 0;
+}
