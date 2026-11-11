@@ -71,13 +71,12 @@ app.post('/api/recipe', async (req, res) => {
 
 		res.json({ recipe })
 	} catch (error) {
-		console.error('Mistral API error:', {
-			message: error.message,
-			status: error.status,
-		})
+		console.error('MISTRAL ERROR:', error)
+		console.error('HTTP RESPONSE:', error.httpResponse || error.response)
 
-		res.status(error.status || 500).json({
-			error: error.message || 'Failed to generate recipe.',
+		res.status(500).json({
+			error: error.message,
+			details: error.httpResponse || error.response || null,
 		})
 	}
 })
