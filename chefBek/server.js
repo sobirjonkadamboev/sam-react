@@ -1,4 +1,4 @@
-import { InferenceClient } from '@huggingface/inference'
+import { GoogleGenAI } from '@google/genai'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
@@ -11,32 +11,16 @@ const PORT = 3001
 app.use(cors())
 app.use(express.json())
 
-if (!process.env.HF_ACCESS_TOKEN) {
-	throw new Error('HF_ACCESS_TOKEN is missing from .env')
+if (!process.env.GEMINI_API_KEY) {
+	throw new Error('GEMINI_API_KEY is missing from .env')
 }
 
-const hf = new InferenceClient(process.env.HF_ACCESS_TOKEN)
-
-const SYSTEM_PROMPT = `
-You are Chef-Bek, a helpful cooking assistant.
-
-You receive a list of ingredients and suggest a delicious recipe
-that the user can prepare with some or all of those ingredients.
-
-You may include a few additional ingredients if necessary.
-Keep the recipe practical and easy to follow.
-
-Format your response in Markdown.
-Include:
-- Recipe name
-- Short description
-- Preparation time
-- Ingredients
-- Step-by-step instructions
-`
+const ai = new GoogleGenAI({
+	apiKey: process.env.GEMINI_API_KEY,
+})
 
 app.get('/', (req, res) => {
-	res.send('Chef-Bek Mistral backend is running!')
+	res.send('Chef-Bek Gemini backend is running!')
 })
 
 app.post('/api/recipe', async (req, res) => {
@@ -49,38 +33,39 @@ app.post('/api/recipe', async (req, res) => {
 			})
 		}
 
-		const ingredientsString = ingredients.join(', ')
-
-		const response = await hf.chatCompletion({
-			model: 'mistralai/Mistral-7B-Instruct-v0.3',
-			messages: [
-				{
-					role: 'system',
-					content: SYSTEM_PROMPT,
-				},
-				{
-					role: 'user',
-					content: `I have these ingredients: ${ingredientsString}. Suggest a recipe.`,
-				},
-			],
-			max_tokens: 1024,
-			temperature: 0.7,
+		const response = await ai.models.generateContent({
+			model: 'gemini-3.8-flash',
+			contents: `I have these ingredients: ${ingredients.join(', ')}.
+      Suggest a delicious and practical recipe.`,
+			config: {
+				systemInstruction: `
+          You are Chef-Bek, a helpful cooking assistant.
+          Create practical recipes using the user's ingredients.
+          Include:
+          1. Recipe name
+          2. Short description
+          3. Preparation and cooking time
+          4. Ingredients with quantities
+          5. Clear step-by-step instructions
+          Format your answer in Markdown.
+        `,
+				temperature: 0.7,
+				maxOutputTokens: 1000,
+			},
 		})
 
-		const recipe = response.choices[0].message.content
-
-		res.json({ recipe })
+		res.json({
+			recipe: response.text,
+		})
 	} catch (error) {
-		console.error('MISTRAL ERROR:', error)
-		console.error('HTTP RESPONSE:', error.httpResponse || error.response)
+		console.error('GEMINI ERROR:', error)
 
 		res.status(500).json({
-			error: error.message,
-			details: error.httpResponse || error.response || null,
+			error: error.message || 'Failed to generate recipe.',
 		})
 	}
 })
 
 app.listen(PORT, () => {
-	console.log(`Chef-Bek Mistral backend running on port ${PORT}`)
+	console.log(`Chef-Bek Gemini backend running on port ${PORT}`)
 })
