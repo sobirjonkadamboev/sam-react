@@ -44,7 +44,7 @@ export default function Main() {
 					name='ingredient'
 					required
 				/>
-				<button type='submit'>+ Add ingredient</button>
+				<button type='submit'>Add ingredient</button>
 			</form>
 
 			{ingredients.length > 0 && (
