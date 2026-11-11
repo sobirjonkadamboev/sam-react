@@ -1,5 +1,4 @@
 import React from 'react'
-import { getRecipeFromMistral } from './ai'
 import ClaudeRecipe from './components/ClaudeRecipe'
 import IngredientsList from './components/IngredientsList'
 
