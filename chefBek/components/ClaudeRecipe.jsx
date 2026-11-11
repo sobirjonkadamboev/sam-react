@@ -1,3 +1,7 @@
 export default function ClaudeRecipe(props) {
-	return <section>{props.recipe}</section>
+	return (
+		<section>
+			<ReactMarkdown>{props.recipe}</ReactMarkdown>
+		</section>
+	)
 }
