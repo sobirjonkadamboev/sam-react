@@ -54,7 +54,7 @@ app.post('/api/recipe', async (req, res) => {
           Format your answer in Markdown.
         `,
 				temperature: 0.7,
-				maxOutputTokens: 600,
+				maxOutputTokens: 3000,
 			},
 		})
 
