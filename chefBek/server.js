@@ -27,9 +27,13 @@ app.post('/api/recipe', async (req, res) => {
 	try {
 		const { ingredients } = req.body
 
-		if (!Array.isArray(ingredients) || ingredients.length === 0) {
+		if (
+			!Array.isArray(ingredients) ||
+			ingredients.length === 0 ||
+			!ingredients.every(item => typeof item === 'string' && item.trim())
+		) {
 			return res.status(400).json({
-				error: 'Please provide some ingredients.',
+				error: 'Please provide valid ingredients.',
 			})
 		}
 
