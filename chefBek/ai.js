@@ -23,24 +23,29 @@ const anthropic = new Anthropic({
 	dangerouslyAllowBrowser: true,
 })
 
-export async function getRecipeFromChefClaude(ingredientsArr) {
-	const response = await fetch('/api/recipe', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({
-			ingredients: ingredientsArr,
-		}),
-	})
+export async function getRecipeFromMistral(ingredientsArr) {
+	try {
+		const response = await fetch('/api/recipe', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				ingredients: ingredientsArr,
+			}),
+		})
 
-	const data = await response.json()
+		const data = await response.json()
 
-	if (!response.ok) {
-		throw new Error(data.error || 'Recipe generation failed')
+		if (!response.ok) {
+			throw new Error(data.error || 'Recipe generation failed')
+		}
+
+		return data.recipe
+	} catch (error) {
+		console.error('Mistral recipe error:', error)
+		throw error
 	}
-
-	return data.recipe
 }
 
 // Make sure you set an environment variable in Scrimba
