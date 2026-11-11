@@ -24,20 +24,23 @@ const anthropic = new Anthropic({
 })
 
 export async function getRecipeFromChefClaude(ingredientsArr) {
-	const ingredientsString = ingredientsArr.join(', ')
-
-	const msg = await anthropic.messages.create({
-		model: 'claude-3-haiku-20240307',
-		max_tokens: 1024,
-		system: SYSTEM_PROMPT,
-		messages: [
-			{
-				role: 'user',
-				content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!`,
-			},
-		],
+	const response = await fetch('/api/recipe', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			ingredients: ingredientsArr,
+		}),
 	})
-	return msg.content[0].text
+
+	const data = await response.json()
+
+	if (!response.ok) {
+		throw new Error(data.error || 'Recipe generation failed')
+	}
+
+	return data.recipe
 }
 
 // Make sure you set an environment variable in Scrimba
