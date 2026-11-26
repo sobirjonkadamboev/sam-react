@@ -10,9 +10,7 @@ const HeaderFunction = () => {
 			</div>
 		)
 	}
-	;<div>
-		<h1>salom</h1>
-	</div>
+
 	return <div>{getText('Sobirjon')}</div>
 }
 
